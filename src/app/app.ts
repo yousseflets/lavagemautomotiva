@@ -6,8 +6,9 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrls: ['./app.css']
+  styleUrls: ['./app.scss']
 })
 export class App {
-  protected readonly title = signal('LavagemAutomotiva');
+  protected readonly title = signal('temp-app');
+  readonly year = new Date().getFullYear();
 }
