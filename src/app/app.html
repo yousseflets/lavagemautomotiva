@@ -18,54 +18,16 @@
 						<rect x="18" y="72" width="84" height="18" rx="6" fill="#111"/>
 					</svg>
 				</div>
-				<span class="brand-text">Murakami Garage</span>
 			</a>
 			<ul class="nav-links">
 				<li><a href="#services">Serviços</a></li>
 				<li><a href="#contato">Contato</a></li>
-				<li><a href="#">Agende</a></li>
+				<li><a class="btn primary" href="https://wa.me/5511956598986?text=Ol%C3%A1%20gostaria%20de%20realizar%20um%20agendamento%20e%20obter%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Agende seu horário">Agende seu horário</a></li>
 			</ul>
 		</div>
 	</nav>
 
-	<header class="hero container">
-		<div class="hero-content">
-			<h1 class="hero-title">Murakami Garage</h1>
-			<p class="hero-lead">Serviços automotivos profissionais — lavagem, polimento e higienização com atenção aos detalhes.</p>
-			<div class="hero-ctas">
-				<a class="btn primary" href="#services">Ver serviços</a>
-				<a class="btn ghost" href="#contato">Fale conosco</a>
-			</div>
-		</div>
-		<div class="hero-media">
-			<img src="/home-car.png" alt="Carro" onerror="this.style.display='none'" />
-		</div>
-	</header>
-
-	<main id="services" class="container sections">
-		<section class="services-grid">
-			<article class="service-card">
-				<img class="service-img" src="/lavagem.png" alt="Lavagem" />
-				<h3>LAVAGENS</h3>
-				<p>Lavagem completa, estética externa e interna com produtos de alta qualidade.</p>
-				<a class="btn small" href="#">Saiba mais</a>
-			</article>
-
-			<article class="service-card">
-				<img class="service-img" src="/polimento.png" alt="Polimentos" />
-				<h3>POLIMENTOS</h3>
-				<p>Polimento e recuperação de pintura, remoção de riscos leves e proteção da superfície.</p>
-				<a class="btn small" href="#">Saiba mais</a>
-			</article>
-
-			<article class="service-card">
-				<img class="service-img" src="/higienizacao.png" alt="Higienização" />
-				<h3>HIGIENIZAÇÃO</h3>
-				<p>Higienização interna com limpeza profunda e tratamento de odores.</p>
-				<a class="btn small" href="#">Saiba mais</a>
-			</article>
-		</section>
-	</main>
+	<router-outlet></router-outlet>
 
 	<section id="contato" class="container contact sections">
 		<div class="contact-inner">
@@ -97,8 +59,6 @@
 	</section>
 
 	<footer class="site-footer container">
-		<div>Desenvolvido por Leticia Youssef - {{ year }}</div>
+		<div>Desenvolvido por <b>SolutionWebTI</b> - {{ year }}</div>
 	</footer>
 </div>
-
-<router-outlet></router-outlet>
