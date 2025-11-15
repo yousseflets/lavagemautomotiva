@@ -56,7 +56,16 @@ body{
   box-shadow: none;
   transform: translateY(-2px);
 }
-
+.instagram {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+} 
+.whatsapp {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+} 
 /* SECTIONS */
 .sections{ padding:28px 0; }
 .services-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:20px; }
