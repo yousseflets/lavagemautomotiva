@@ -73,6 +73,20 @@ body{
   height: 34px;
   border-radius: 8px;
 } 
+.site-address{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  color:#fff;
+  font-size:14px;
+  margin-top:6px;
+}
+.site-address .mapa{ width:26px; height:26px; flex:0 0 18px; color:inherit; }
+
+@media (max-width:520px){
+  .site-address{ font-size:13px; gap:8px; padding:6px 12px; }
+}
 /* SECTIONS */
 .sections{ padding:28px 0; }
 .services-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:20px; }
