@@ -9,52 +9,61 @@
       <h2>Lavagens</h2>
     </div>
   </div>
-  <div class="table-wrap">
-    <table class="price-table">
-      <thead>
-        <tr>
-          <th>Serviço</th>
-          <th>Descrição</th>
-          <th>Carro Pequeno</th>
-          <th>Carro Médio</th>
-          <th>Carro Grande</th>
-          <th>Agendar</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-label="Serviço">Ducha</td>
-          <td data-label="Descrição">Lavagem por fora do veículo + pretinho</td>
-          <td data-label="Carro Pequeno">R$35,00</td>
-          <td data-label="Carro Médio">R$35,00</td>
-          <td data-label="Carro Grande">R$45,00</td>
-          <td data-label="Agendar"><button class="btn small" onclick="window.open('https://wa.me/5511956598986?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20servi%C3%A7o%20%22Ducha%22','_blank')" aria-label="Agendar Ducha">Agendar</button></td>
-        </tr>
-        <tr>
-          <td data-label="Serviço">Lavagem Simples</td>
-          <td data-label="Descrição">Lavagem externa + interna (aspiração e painel)</td>
-          <td data-label="Carro Pequeno">R$50,00</td>
-          <td data-label="Carro Médio">R$60,00</td>
-          <td data-label="Carro Grande">R$75,00</td>
-          <td data-label="Agendar"><button class="btn small" onclick="window.open('https://wa.me/5511956598986?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20servi%C3%A7o%20%22Lavagem%20Simples%22','_blank')" aria-label="Agendar Lavagem Simples">Agendar</button></td>
-        </tr>
-        <tr>
-          <td data-label="Serviço">Lavagem Detalhada e Cristalização</td>
-          <td data-label="Descrição">Limpeza completa, produtos premium e aplicação de cera</td>
-          <td data-label="Carro Pequeno">R$120,00</td>
-          <td data-label="Carro Médio">R$150,00</td>
-          <td data-label="Carro Grande">R$200,00</td>
-          <td data-label="Agendar"><button class="btn small" onclick="window.open('https://wa.me/5511956598986?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20servi%C3%A7o%20%22Lavagem%20Detalhada%20e%20Cristaliza%C3%A7%C3%A3o%22','_blank')" aria-label="Agendar Lavagem Detalhada e Cristalização">Agendar</button></td>
-        </tr>
-        <tr>
-          <td data-label="Serviço">Lavagem Premium + Descontaminação</td>
-          <td data-label="Descrição">Limpeza profunda e preparação para proteção extra</td>
-          <td data-label="Carro Pequeno">R$160,00</td>
-          <td data-label="Carro Médio">R$200,00</td>
-          <td data-label="Carro Grande">R$260,00</td>
-          <td data-label="Agendar"><button class="btn small" onclick="window.open('https://wa.me/5511956598986?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20servi%C3%A7o%20%22Lavagem%20Premium%20%2B%20Descontamina%C3%A7%C3%A3o%22','_blank')" aria-label="Agendar Lavagem Premium e Descontaminação">Agendar</button></td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="services-grid">
+    <article class="service-card">
+      <img class="service-img" src="/lavagem-ducha.jpeg" alt="Ducha" />
+      <h3>Ducha</h3>
+      <p class="descricao" >Lavagem por fora do veículo + pretinho</p>
+      <div class="prices">
+        <span class="price"><strong>P</strong> R$35,00</span>
+        <span class="price"><strong>M</strong> R$35,00</span>
+        <span class="price"><strong>G</strong> R$45,00</span>
+      </div>
+      <div class="actions">
+        <button class="btn small" onclick="window.open('https://wa.me/5511956598986?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20servi%C3%A7o%20%22Ducha%22','_blank')" aria-label="Agendar Ducha">Agendar</button>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <img class="service-img" src="/lavagem-simples.jpeg" alt="Lavagem Simples" />
+      <h3>Lavagem Simples</h3>
+      <p class="descricao" >Lavagem externa + interna (aspiração e painel)</p>
+      <div class="prices">
+        <span class="price"><strong>P</strong> R$50,00</span>
+        <span class="price"><strong>M</strong> R$60,00</span>
+        <span class="price"><strong>G</strong> R$75,00</span>
+      </div>
+      <div class="actions">
+        <button class="btn small" onclick="window.open('https://wa.me/5511956598986?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20servi%C3%A7o%20%22Lavagem%20Simples%22','_blank')" aria-label="Agendar Lavagem Simples">Agendar</button>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <img class="service-img" src="/lavagem-detalhadaCristalização.jpeg" alt="Lavagem Detalhada e Cristalização" />
+      <h3>Lavagem Detalhada e Cristalização</h3>
+      <p class="descricao" >Limpeza completa, produtos premium e aplicação de cera</p>
+      <div class="prices">
+        <span class="price"><strong>P</strong> R$120,00</span>
+        <span class="price"><strong>M</strong> R$150,00</span>
+        <span class="price"><strong>G</strong> R$200,00</span>
+      </div>
+      <div class="actions">
+        <button class="btn small" onclick="window.open('https://wa.me/5511956598986?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20servi%C3%A7o%20%22Lavagem%20Detalhada%20e%20Cristaliza%C3%A7%C3%A3o%22','_blank')" aria-label="Agendar Lavagem Detalhada e Cristalização">Agendar</button>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <img class="service-img" src="/Lavagem-premiumDescontaminacao.jpeg" alt="Lavagem Premium + Descontaminação" />
+      <h3>Lavagem Premium + Descontaminação</h3>
+      <p class="descricao" >Limpeza profunda e preparação para proteção extra</p>
+      <div class="prices">
+        <span class="price"><strong>P</strong> R$160,00</span>
+        <span class="price"><strong>M</strong> R$200,00</span>
+        <span class="price"><strong>G</strong> R$260,00</span>
+      </div>
+      <div class="actions">
+        <button class="btn small" onclick="window.open('https://wa.me/5511956598986?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20servi%C3%A7o%20%22Lavagem%20Premium%20%2B%20Descontamina%C3%A7%C3%A3o%22','_blank')" aria-label="Agendar Lavagem Premium e Descontaminação">Agendar</button>
+      </div>
+    </article>
   </div>
 </section>
