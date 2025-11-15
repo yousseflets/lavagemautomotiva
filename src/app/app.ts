@@ -24,6 +24,15 @@ export class App {
             if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             this.pendingFragment = null;
           }, 50);
+        } else {
+          // No fragment requested: ensure new route starts at top
+          try {
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+          } catch (err) {
+            // fallback for environments where window is not available
+            // eslint-disable-next-line no-console
+            console.warn('[App] could not scroll to top', err);
+          }
         }
       }
     });
