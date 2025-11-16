@@ -40,7 +40,7 @@ body{
 .btn{ display:inline-block; padding:12px 18px; border-radius:10px; text-decoration:none; font-weight:700; }
 .btn.primary{ background: linear-gradient(90deg,#2703b5,#0295ba); color:#fff; box-shadow:0 10px 30px rgba(6,182,212,0.12); }
 .btn.ghost{ background:transparent; border:2px solid rgba(238, 237, 239, 0.06); color:#fff; }
-.btn.small{ padding:8px 12px; border-radius:8px; font-size:14px; background: linear-gradient(90deg,#2703b5,#01115a); color:#ffffff; box-shadow:0 10px 30px rgba(6,182,212,0.12); transition: background .12s ease, color .12s ease, transform .12s ease, box-shadow .12s ease; }
+.btn.small{ padding:8px 12px; border-radius:8px; font-size:14px; background: linear-gradient(90deg,#2703b5,#01115a); color:#ffffff; box-shadow:0 10px 30px rgba(6,182,212,0.12); transition: background .12s ease, color .12s ease, transform .12s ease, box-shadow .12s ease; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
 
 /* Global hover for small buttons: white background and black text */
 .btn.small:hover{
@@ -48,7 +48,11 @@ body{
   color: #111;
   box-shadow: none;
   transform: translateY(-2px);
+  text-decoration: none;
 }
+
+/* Ensure anchors used as prices don't show underline */
+.price.btn.small, a.price { text-decoration: none; }
 
 /* 'Saiba mais' buttons inside service cards: change only on hover */
 .service-card .btn.small{
@@ -146,6 +150,32 @@ body{
   }
   .lavagens-page .page-hero h1{ margin:0 0 12px; }
   .lavagens-page .page-hero .btn.small{ margin:0 0 10px; }
+}
+
+/* Reduce spacing under the page title for service pages (Polimentos) */
+.polimentos-page .page-hero h1{
+  margin-bottom:6px; /* smaller gap between title and note */
+}
+.polimentos-page .page-hero .page-note{
+  display:block;
+  margin-top:0;
+  font-size:10px;
+  color:#ff2b2b; /* keep the red tone */
+}
+
+/* Make title and note even closer on Polimentos page */
+.polimentos-page.sections{
+  padding-top:8px; /* reduce top padding further for tighter spacing */
+  padding-bottom:18px;
+}
+.polimentos-page .page-hero h1{
+  margin-bottom:0; /* remove gap */
+  line-height:1.02;
+}
+.polimentos-page .page-hero .page-note{
+  margin-top:0; /* sit immediately under the title */
+  font-size:11px;
+  display:block;
 }
 
 /* Tweak header sizing on very small screens so CTA doesn't wrap */
