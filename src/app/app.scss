@@ -140,6 +140,25 @@ body{
   .hero-media{ display:flex; justify-content:center; margin-top:12px; }
 }
 
+/* Position contact logo to the right without changing the stacked layout
+   Keep the original vertical (centered) layout and place the logo absolutely
+   so it doesn't break the content flow. */
+.contact{ position: relative; }
+
+@media (min-width:900px){
+  .contact-inner{ flex-direction:row; align-items:center; text-align:left; justify-content:space-between; }
+  .contact-left{ flex:1 1 auto; display:flex; flex-direction:column; gap:12px; }
+  .contact-actions{ order:2; }
+  .site-address{ order:3; }
+  .contact-brand-right{ flex:0 0 auto; margin-left:24px; display:flex; align-items:center; }
+  .contact-logo-right{ width: 300px; height:300px; object-fit:cover; border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,0.35); }
+}
+
+/* Hide the right-side logo on small screens to avoid overlap */
+@media (max-width:899px){
+  .contact-brand-right{ display:none; }
+}
+
 /* Center service page hero (title + back button) on small screens */
 @media (max-width:520px){
   .lavagens-page .page-hero{
