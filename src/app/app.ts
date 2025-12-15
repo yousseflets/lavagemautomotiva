@@ -17,6 +17,17 @@ export class App {
     this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
         console.log('[App] NavigationEnd:', e.urlAfterRedirects);
+        // Toggle maintenance-mode class based on active route
+        try {
+          const path = (e.urlAfterRedirects || '').split('?')[0].split('#')[0];
+          if (path === '/' || path === '' || path === '/manutencao') {
+            document.documentElement.classList.add('maintenance-mode');
+          } else {
+            document.documentElement.classList.remove('maintenance-mode');
+          }
+        } catch (err) {
+          // ignore DOM errors
+        }
         if (this.pendingFragment) {
           setTimeout(() => {
             const id = this.pendingFragment as string;

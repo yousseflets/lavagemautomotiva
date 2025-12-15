@@ -1,0 +1,11 @@
+.maintenance-page{ display:flex; align-items:center; justify-content:center; min-height:60vh; }
+.maintenance-inner{ text-align:center; color:#fff; padding:40px 20px; }
+.maintenance-logo{ width:120px; height:120px; object-fit:cover; border-radius:12px; margin:0 auto 18px; display:block; box-shadow:0 10px 30px rgba(0,0,0,0.4); }
+.maintenance-page h1{ font-size:36px; margin:0 0 8px; }
+.maintenance-page .lead{ color:#ddd; margin:0 0 18px; max-width:680px; }
+.maintenance-page .btn.primary{ padding:12px 20px; border-radius:10px; }
+
+@media (max-width:520px){
+  .maintenance-page h1{ font-size:28px; }
+  .maintenance-logo{ width:88px; height:88px; }
+}

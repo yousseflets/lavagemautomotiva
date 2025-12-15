@@ -166,6 +166,65 @@ body{
   .contact-brand-right{ display:none; }
 }
 
+/* Show logo only in the nav; hide any other logo images added to sections */
+.contact-logo-right,
+.contact-logo,
+.maintenance-logo{
+  display: none !important;
+}
+
+/* When in maintenance mode hide navigation links and the contact section.
+   Use :host-context so the selectors match even though styles are scoped
+   to the App component (ensures ancestor `.maintenance-mode` on <html>
+   will trigger these rules). */
+:host-context(.maintenance-mode) .nav-links{ display: none !important; }
+:host-context(.maintenance-mode) .nav .btn.small{ display: none !important; }
+:host-context(.maintenance-mode) .contact{ display: none !important; }
+/* Hide any sections other than the maintenance page (if present in DOM) */
+:host-context(.maintenance-mode) .site > *:not(.maintenance-page):not(.site-footer) { display: none !important; }
+/* ensure maintenance page is visible and centered */
+:host-context(.maintenance-mode) .maintenance-page { display: flex !important; align-items: center; justify-content: center; min-height: 70vh; }
+/* ensure footer remains visible */
+:host-context(.maintenance-mode) footer.site-footer { display: block !important; }
+
+/* When maintenance mode is active, show maintenance logo (override global hide) */
+:host-context(.maintenance-mode) .maintenance-logo {
+  display: block !important;
+  width: 120px !important;
+  height: 120px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  margin-bottom: 18px !important;
+}
+
+/* Small layout for maintenance inner content */
+:host-context(.maintenance-mode) .maintenance-inner{ display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center; }
+
+/* layout for multiple maintenance logos side-by-side with responsive fallback */
+:host-context(.maintenance-mode) .maintenance-logos{
+  display:flex !important;
+  flex-direction:row !important;
+  gap:14px !important;
+  align-items:center !important;
+  justify-content:center !important;
+  flex-wrap:wrap !important;
+}
+
+:host-context(.maintenance-mode) .maintenance-logos .maintenance-logo{
+  display:block !important;
+  width:120px !important;
+  height:120px !important;
+  object-fit:cover !important;
+  border-radius:50% !important;
+  overflow:hidden !important;
+}
+
+@media (max-width:520px){
+  :host-context(.maintenance-mode) .maintenance-logos{ gap:10px; }
+  :host-context(.maintenance-mode) .maintenance-logos .maintenance-logo{ width:90px !important; height:90px !important; }
+}
+
 /* Center service page hero (title + back button) on small screens */
 @media (max-width:520px){
   .lavagens-page .page-hero{
