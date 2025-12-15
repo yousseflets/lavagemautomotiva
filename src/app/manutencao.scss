@@ -9,3 +9,26 @@
   .maintenance-page h1{ font-size:28px; }
   .maintenance-logo{ width:88px; height:88px; }
 }
+
+/* Global rules that apply when the html element has `maintenance-mode` class.
+   Moved here to keep `app.scss` smaller (budget for bundle). */
+html.maintenance-mode .nav-links{ display: none !important; }
+html.maintenance-mode .nav .btn.small{ display: none !important; }
+html.maintenance-mode .contact{ display: none !important; }
+/* Hide all top-level children of .site then explicitly show the maintenance host and the footer.
+  We need to show the component host (e.g. <app-manutencao>) because the template is rendered inside it. */
+html.maintenance-mode .site > * { display: none !important; }
+html.maintenance-mode .site > app-manutencao { display: block !important; }
+html.maintenance-mode .maintenance-page { display: flex !important; align-items: center; justify-content: center; min-height: 70vh; }
+html.maintenance-mode footer.site-footer { display: block !important; }
+
+/* Show maintenance logos and layout when maintenance-mode is active */
+html.maintenance-mode .maintenance-logo{ display:block !important; width:120px !important; height:120px !important; object-fit:cover !important; border-radius:50% !important; overflow:hidden !important; margin-bottom:18px !important; }
+html.maintenance-mode .maintenance-inner{ display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center; }
+html.maintenance-mode .maintenance-logos{ display:flex !important; flex-direction:row !important; gap:14px !important; align-items:center !important; justify-content:center !important; flex-wrap:wrap !important; }
+html.maintenance-mode .maintenance-logos .maintenance-logo{ display:block !important; width:120px !important; height:120px !important; object-fit:cover !important; border-radius:50% !important; overflow:hidden !important; }
+
+@media (max-width:520px){
+  html.maintenance-mode .maintenance-logos{ gap:10px; }
+  html.maintenance-mode .maintenance-logos .maintenance-logo{ width:90px !important; height:90px !important; }
+}

@@ -1,10 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-manutencao',
   standalone: true,
   templateUrl: './manutencao.html',
-  styleUrls: ['./manutencao.scss','./app.scss']
+  styleUrls: ['./manutencao.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ManutencaoPage implements OnInit, OnDestroy {
   ngOnInit(): void {
